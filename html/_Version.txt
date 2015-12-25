@@ -1,0 +1,31 @@
+Site Template
+
+Current Version 1.2
+	index.php 									V1.0
+	_User.php										V1.2
+	_SiteSpecificFunctions.php  V1.1
+	_PageTemplate.php           V1.0
+	_mySQLFunctions.php         V1.1
+	_Logout.php                 V1.2
+	_Login.php                  V1.2
+	_GeneralFunctions.php       V1.2
+	_Basic.css                  V1.0
+	_404.php                    V1.0
+	SaveUser.php                V1.0
+	RegisterForm.php            V1.0
+	_Vars.php                   V1.2
+  
+V0.0
+	Basic Build.  For Further History see individual files or the version files in koryhurst and clhelper
+V1.0
+	_mySQLFunction.php - to V1.1
+V1.1
+	_GeneralFunctions - to V1.2
+V1.2
+	_mySQLFunctions.php to V1.1
+	_Vars.php to V1.2
+	index.php added to package as V1.0	
+	_GeneralFunctions.php to V1.3
+	_User.php to V1.2
+	_SiteSpecificFunctions.php to V1.1
+	_Logout.php to V1.2

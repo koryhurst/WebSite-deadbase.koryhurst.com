@@ -1,0 +1,18 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="10">
+            <File firstVisibleLine="12" xOffset="0" scrollWidth="357" startPos="346" endPos="314" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep1.sql" backupFilePath="" originalFileLastModifTimestamp="1449010145" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="960" startPos="51" endPos="51" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep2.sql" backupFilePath="" originalFileLastModifTimestamp="1449020742" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="888" startPos="387" endPos="387" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep3.sql" backupFilePath="" originalFileLastModifTimestamp="1449079224" />
+            <File firstVisibleLine="1" xOffset="0" scrollWidth="1140" startPos="51" endPos="51" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep4.sql" backupFilePath="" originalFileLastModifTimestamp="1449020742" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1461" startPos="51" endPos="51" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep5.sql" backupFilePath="" originalFileLastModifTimestamp="1449028790" />
+            <File firstVisibleLine="37" xOffset="0" scrollWidth="1842" startPos="2122" endPos="2122" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep6.sql" backupFilePath="" originalFileLastModifTimestamp="1449026400" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="789" startPos="758" endPos="649" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep7.sql" backupFilePath="" originalFileLastModifTimestamp="1449020742" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="987" startPos="139" endPos="139" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep8.sql" backupFilePath="" originalFileLastModifTimestamp="1449078717" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="933" startPos="387" endPos="387" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\_KnownDBErrors.txt" backupFilePath="" originalFileLastModifTimestamp="1449079224" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="987" startPos="127" endPos="127" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\BuildDBandImportStep9.sql" backupFilePath="" originalFileLastModifTimestamp="1449085059" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="951" startPos="139" endPos="139" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\PagesForSite.sql" backupFilePath="" originalFileLastModifTimestamp="1449078749" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

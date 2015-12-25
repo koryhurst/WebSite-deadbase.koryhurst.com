@@ -1,0 +1,12 @@
+Known deadbase errors
+
+Shows with missing spaces in the notes field
+Pretty sure that this is not a problem with the import.
+compared show 1580 with the original in excel.  It had cartwheelsfirst as well
+ShowID=347
+
+Shows with songs only played once, without only in the notes.
+ShowID=1169
+
+
+SetListSongID in tblsetlistsongdetail is misnamed.  It should be SetListSongDetailID.

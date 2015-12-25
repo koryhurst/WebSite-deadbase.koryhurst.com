@@ -1,0 +1,15 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="6">
+            <File firstVisibleLine="0" xOffset="110" scrollWidth="1055" startPos="117" endPos="117" selMode="0" lang="Batch" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\ReplicateToLocalServer.cmd" backupFilePath="" originalFileLastModifTimestamp="1447360964" />
+            <File firstVisibleLine="9" xOffset="11" scrollWidth="1464" startPos="81" endPos="81" selMode="0" lang="PHP" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\show.php" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="951" startPos="81" endPos="81" selMode="0" lang="SQL" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\PagesForSite.sql" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+            <File firstVisibleLine="3" xOffset="0" scrollWidth="1212" startPos="81" endPos="81" selMode="0" lang="PHP" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\showlist-acoustic.php" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1032" startPos="81" endPos="81" selMode="0" lang="PHP" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\_SiteSpecificFunctions.php" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+            <File firstVisibleLine="10" xOffset="0" scrollWidth="1212" startPos="81" endPos="81" selMode="0" lang="PHP" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\showlist-allbydate.php" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="591" startPos="159" endPos="159" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\dbbuild\_KnownDBErrors.txt" backupFilePath="" originalFileLastModifTimestamp="1449034683" />
+            <File firstVisibleLine="1" xOffset="0" scrollWidth="1212" startPos="873" endPos="873" selMode="0" lang="PHP" encoding="-1" filename="C:\Users\koryh_000\Documents\GitHub\GratefulDeadDatabase\showlist-taperank.php" backupFilePath="" originalFileLastModifTimestamp="1449034299" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
