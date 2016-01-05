@@ -42,20 +42,21 @@ echo '<li><a href="songlist.php?SortBy=SongText&SortOrder=asc">Songs by Title</a
 //echo '<li><a href="jamlist.php?SortBy=TimesPlayed&SortOrder=desc">Jams by Frequency</a></li>';		
 //echo '<li><a href="jamlist.php?SortBy=NumberOfSongs&SortOrder=desc">Jams by Most Songs</a></li>';		
 //echo '</ul>';
-echo '</div>' ;
-echo '<div id="adsense">' ;
 
-echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'; 
-echo '<!-- GD-Responsive -->'; 
-echo '<ins class="adsbygoogle"'; 
-echo '     style="display:block"'; 
-echo '     data-ad-client="ca-pub-0226424803408503"'; 
-echo '     data-ad-slot="2830414196"'; 
-echo '     data-ad-format="auto"></ins>'; 
-echo '<script>'; 
-echo '(adsbygoogle = window.adsbygoogle || []).push({});'; 
-echo '</script>'; 
+?>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- GD-Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0226424803408503"
+     data-ad-slot="2830414196"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<?
 
 //if (isset($_SESSION['UserID'])) 
 //{
