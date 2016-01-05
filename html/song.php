@@ -18,13 +18,13 @@ echo '<div id="entry">' . $NewLine;
 
 //echo 'Man this query needs tuning.';
 
-$sSQLSong = 'select SongText, MainVocals from tblSong where SongID = ' . $iSongID; 
+$sSQLSong = 'select SongText, MainVocals from tblsong where SongID = ' . $iSongID; 
 
 $sSQLTimesPlayed = 'select tsh.ShowID, ShowDate, City ';
-$sSQLTimesPlayed = $sSQLTimesPlayed . 'from tblSetListSongDetail tsd ';
-$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblSetList tse on tsd.SetListID = tse.SetListID ';
-$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblShow tsh on tse.ShowID = tsh.ShowID ';
-$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblVenue tv on tv.VenueID = tsh.VenueID ';
+$sSQLTimesPlayed = $sSQLTimesPlayed . 'from tblsetlistsongdetail tsd ';
+$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblsetlist tse on tsd.SetListID = tse.SetListID ';
+$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblshow tsh on tse.ShowID = tsh.ShowID ';
+$sSQLTimesPlayed = $sSQLTimesPlayed . 'inner join tblvenue tv on tv.VenueID = tsh.VenueID ';
 $sSQLTimesPlayed = $sSQLTimesPlayed . 'where SongID = '. $iSongID . ' ';
 $sSQLTimesPlayed = $sSQLTimesPlayed . 'order by ShowDate asc ' ;
 
