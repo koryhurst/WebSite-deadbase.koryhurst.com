@@ -16,6 +16,20 @@ function GetApplicationSpecificDetails($iUserID)
 
 function WriteRightPane()
 {
+	
+$adsensecode = '
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- GD-Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0226424803408503"
+     data-ad-slot="2830414196"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+
+
 //to end content section
 echo '<div id="sidebar">' ;
 
@@ -43,21 +57,7 @@ echo '<li><a href="songlist.php?SortBy=SongText&SortOrder=asc">Songs by Title</a
 //echo '<li><a href="jamlist.php?SortBy=NumberOfSongs&SortOrder=desc">Jams by Most Songs</a></li>';		
 //echo '</ul>';
 
-?>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- GD-Responsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-0226424803408503"
-     data-ad-slot="2830414196"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<?
-
+echo $adsensecode;
 //if (isset($_SESSION['UserID'])) 
 //{
 //	echo '<a href="_Logout.php">Logout</a>' . $NewLine ;
