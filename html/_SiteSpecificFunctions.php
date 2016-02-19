@@ -19,12 +19,11 @@ function WriteRightPane()
 	
 $adsensecode = '
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- GD-Responsive -->
+<!-- deadbase.koryhurst.com-SideBanner -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;width:160px;height:600px"
      data-ad-client="ca-pub-0226424803408503"
-     data-ad-slot="2830414196"
-     data-ad-format="auto"></ins>
+     data-ad-slot="8015016593"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>';
