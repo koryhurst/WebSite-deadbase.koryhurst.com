@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Kory Hurst" />
+<meta name="revised" content="2014-11-13" />
+<meta name="description" content="Personal Website" />
+<meta name="keywords" content="science, web development, experiments" />
+<title>Personal Site of Kory Hurst</title>
+<link rel="stylesheet" type="text/css" href="_Basic.css">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+</head><body>
+<div id="page">
+<div id="header" style="cursor:pointer;"> 
+<h1><a href="http://www.koryhurst.com">Kory Hurst</a></h1>
+<div class="description">Home</div> 
+</div> 
+<div id="content" class="narrowcolumn">
+<div class="post">
+<div id="entry">
+<center>
+<h3>
+Sorry the page you were looking for is no longer here.  Perhaps it has moved, and you can find it by navigating from the... 
+</h3>
+<h2>
+<a href="http://deadbase.koryhurst.com">Home Page</a>
+
+</h2>
+
+</div>
+</div>
+</div>
+<div id="sidebar">
+</div>
+<div id="footer"> 
+<p class="center">  </p> 
+</div> 
+</div> 
+</body> 
+</html>
