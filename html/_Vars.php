@@ -25,7 +25,7 @@ session_start();
 include("_User.php") ;
 include("_mySQLFunctions.php") ;
 include("_GeneralFunctions.php") ;
-
+include("_Passwords.php") ; 
 include("_SiteSpecificFunctions.php") ;
 
 //I use this variable so that I can always use single quotes to encapsulate strings.
@@ -42,7 +42,7 @@ $sDB = 'dbgrateful' ;
 //echo $_SERVER["SERVER_SOFTWARE"];
 if ($_SERVER["SERVER_SOFTWARE"] == "Apache/2.2.22 (Ubuntu)")
 {
-//For Home Server install
+//For Home Server install -- this is now obsolete
   $sHost = 'localhost' ;
   $sUser = 'root' ;
   $sPass = 'gservermysqlroot';
@@ -62,8 +62,8 @@ else
 	//For GoDaddy install
 	$sInstallType = 'GoDaddy' ;
 	$sHost = '107.180.50.176';
-	$sUser = 'dbgratefulDR' ;
-	$sPass = 'IReadData8112';	
+	$sUser = DATABASEUSER ; //FROM passwords.php 
+	$sPass = DATABASEPASSWORD;	
 }
 
 //Header and Footer Globals
