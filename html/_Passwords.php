@@ -1,4 +1,4 @@
 <?php
 define('DATABASEUSER', 'dbgratefulDR') ; 
-define('DATABASEPASSWORD', 'bca82c6eeb5112ed407a3ae74ed39ef9');    
+define('DATABASEPASSWORD', 'c05c41c13344f7f6b179773183b918f2');    
 ?>
