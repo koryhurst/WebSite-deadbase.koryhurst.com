@@ -50,15 +50,7 @@ if ($aShow['TapeRank'] > 0)
 	}
 echo '</h2>' ;
 echo '<h3>' . $aShow['City'] . ', ' . $aShow['StateName'] . ', ' . $aShow['CountryName'] . '</h3>' ;
-if ($aShow['DeadbaseID'] <> 0)
-	{
-		echo '<h4><a href="http://www.dharmarose.com/deadbase/dbquery110.php4?id=' . $aShow['DeadbaseID'] ; 
-		echo '">' . $aShow['ShowName'] . '</a></h4>' ;
-	}
-else
-	{
-		echo '<h4>' . $aShow['ShowName'] . '</h4>' ;		
-	}
+echo '<h4>' . $aShow['ShowName'] . '</h4>' ;		
 
 //echo '<h4>' . $aShow['ShowFirstLine'] . '</h4>' ;
 if (count($aSetList) > 0)
