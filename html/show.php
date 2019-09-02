@@ -52,6 +52,7 @@ echo '</h2>' ;
 echo '<h3>' . $aShow['City'] . ', ' . $aShow['StateName'] . ', ' . $aShow['CountryName'] . '</h3>' ;
 echo '<h4>' . $aShow['ShowName'] . '</h4>' ;		
 
+
 //echo '<h4>' . $aShow['ShowFirstLine'] . '</h4>' ;
 if (count($aSetList) > 0)
 {
@@ -59,6 +60,8 @@ if (count($aSetList) > 0)
 		{
 //			echo '<h4>' . $aSetListLine['SetType'] . ' - ' . $aSetListLine['LineNr'] . ' - ' .  $aSetListLine['SetText'] . '</h4>' ;
 			echo '<h4>' . $aSetListLine['SetType'] . '</h4>' ;
+      echo '<h4>' . $aSetListLine['SetText'] . '</h4>' ;
+      
 
 
 //			$aTest = preg_split('[,]', "1: H. C. Sunshine/, Me & My Uncle/, Ramble On/, L. L. Rain>Deal/, Mexicali/, ");

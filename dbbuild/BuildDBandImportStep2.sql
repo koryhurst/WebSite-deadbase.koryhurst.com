@@ -5,23 +5,30 @@ THEY MUST BE EXECUTED IN MYSQL WORKBENCH */
 
 use dbgrateful;
 
-load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\venue.csv' into table tblvenue
+/*
+
+GOTTA FIX THIS....
+
+D:\Users\Kory\Documents\_HomeAndWork\GitHub\WebSite-deadbase.koryhurst.com\dbbuild
+*/
+
+load data local infile 'D:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\venue.csv' into table tblvenue
  fields terminated by ','
  enclosed by ''
  lines terminated by '\n';
  
-load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\state.csv' into table tblstate
+load data local infile 'D:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\state.csv' into table tblstate
  fields terminated by ','
  enclosed by ''
  lines terminated by '\n';
  
  
-load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\country.csv' into table tblcountry
+load data local infile 'D:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\country.csv' into table tblcountry
  fields terminated by ','
  enclosed by ''
  lines terminated by '\n';
  
-load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\show.csv' into table tblshow
+load data local infile 'D:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\show.csv' into table tblshow
  fields terminated by ','
  enclosed by ''
  lines terminated by '\n';
@@ -29,7 +36,7 @@ load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\show.csv' in
 ALTER TABLE tblshow ADD ShowNotes varchar(1024);
 ALTER TABLE tblshow ADD ShowFirstLine varchar(1024);
 
-load data local infile 'C:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\setlist.csv' into table tblsetlist
+load data local infile 'D:/\xampp/\htdocs/\mirror/\gdbase/\dbbuild/\setlist.csv' into table tblsetlist
  fields terminated by ','
  enclosed by '"' 
  lines terminated by '\r\n';
