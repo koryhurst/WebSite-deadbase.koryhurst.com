@@ -41,7 +41,7 @@ create table tblshow
 ShowID int,
 ShowDate date,
 ShowName varchar(30),
-ID int,
+DeadbaseID int,
 VenueID int,
 TapeRank int,
 GotIT int,
@@ -8318,4 +8318,3 @@ insert tblsetlist (showid, linenr, settext) values (2311,2,"1: Truckin/, Mama Tr
 insert tblsetlist (showid, linenr, settext) values (2311,3,"2: Good Lovin/, Midnight Hour/, Attics/, Bobby McGee/, Around/, St. Stephen> NFA> GDTRFB> Lovelight");
 insert tblsetlist (showid, linenr, settext) values (2311,4,"last /""Midnight Hour/"": 06-04-70 [72] - also: NRPS");
 
-sele
