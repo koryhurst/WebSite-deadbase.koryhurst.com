@@ -1,3 +1,6 @@
+/* RUN ALL OF THESE FROM THE MYSQL COMMAND LINE */
+
+
 /* This file creates the tables */
 drop table if exists tblvenue ;
 create table tblvenue
@@ -6,7 +9,7 @@ VenueID int,
 Venue varchar(100),
 City varchar(100),
 StateID int,
-CountryID int
+CountryID tinyint
 );
 
 drop table if exists tblstate;
@@ -43,9 +46,11 @@ MyNotes varchar(255)
 drop table if exists tblsetlist;
 create table tblsetlist
 (
+SetListID int NOT NULL AUTO_INCREMENT, 
 ShowID int,
 LineNr int,
-SetText varchar(1024)
+SetText varchar(1024),
+PRIMARY KEY (SetListID)
 );
 
 /*This table may be not required */

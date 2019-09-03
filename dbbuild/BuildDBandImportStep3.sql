@@ -1,4 +1,13 @@
 /* 
+THIS WHOLE STEP IS A CLUDGE.  IT IS PROBABLY BETTER TO MANUALLY 
+FIX THE SOURCE DATA.  THE WHOLE IDEA HERE IS TO TRY TO UPDATE THE 
+SHOWNOTES FIELD IN tblshow FOR THOSE SHOWS THAT HAVE SHOW NOTES.
+THERE HAS TO BE A BETTER WAY
+*/
+
+
+
+/* 
 Blending the updates did not work.  Ended up updating a whole bunch with the same notes
 not the correct ones.  So I split them apart again.
 
@@ -11,7 +20,17 @@ I do not want to not use the with search, as that covers 280 show notes.
 So.  I have created a special circumstance for that one.  Notes below.
 
  */
+
+/*first get the first lines*/
  
+UPDATE tblshow, tblsetlist 
+set tblshow.ShowFirstLine = tblsetlist.SetText
+where tblsetlist.LineNR = 1
+and tblshow.ShowID = tblsetlist.ShowID ;
+
+delete from tblsetlist where linenr = 1;
+
+
 update tblsetlist set SetText = replace(SetText, 'Mart?n Fierro', 'Martin Fierro')
  where instr(SetText, 'Mart?n Fierro') > 0;
  

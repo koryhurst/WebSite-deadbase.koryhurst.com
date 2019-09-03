@@ -1,7 +1,4 @@
 
-use dbgrateful;
-
-
 drop view if exists vwshow;
 create view vwshow AS 
 select 

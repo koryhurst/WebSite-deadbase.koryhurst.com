@@ -1,7 +1,7 @@
 /* normalizes the songs table   */
 /* extracts the footnote tags of songs   */
 
-use dbgrateful;
+
 
 /*select * from tblsong where right(songtext, 4) = "****";*/
 /*select * from tblsong where right(songtext, 3) = "***";*/

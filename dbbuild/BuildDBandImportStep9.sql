@@ -15,8 +15,6 @@ This stuff was a good start, but it is not right.
 /* trying to get the guests out of show notes */
 /*  not bad so far.  the rest might be manual.  making a web page to help. */
 
-use dbgrateful;
-
 drop table if exists tblsetlistsongdetailextranotes;
 
 create table tblsetlistsongdetailextranotes
