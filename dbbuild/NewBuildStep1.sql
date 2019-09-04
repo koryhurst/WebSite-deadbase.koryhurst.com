@@ -1,5 +1,10 @@
 
-/* This file creates the tables */
+/* 
+This file creates the tables 
+and populates them
+*/
+
+
 drop table if exists tblvenue ;
 drop table if exists tblstate;
 drop table if exists tblcountry;
