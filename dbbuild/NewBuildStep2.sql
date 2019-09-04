@@ -198,15 +198,5 @@ delete from tblsetlist
 where settext like '%with%'
 and setlistid <> 2246;
 
-/*  In Show Notes : */
-/* get rid of the escape character "/" for the double quotes*/
-update tblshow set ShowNotes = replace(ShowNotes, "/""", """");
-
-/* get rid of the escape character "/" for the commas */
-update tblshow set ShowNotes = replace(ShowNotes, "/,", ",");
-
-
-
-
 
 

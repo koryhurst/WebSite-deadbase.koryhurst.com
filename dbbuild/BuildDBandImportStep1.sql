@@ -30,7 +30,7 @@ CountryName varchar(25)
  
 drop table if exists tblshow;
 create table tblshow
-(
+(select 
 ShowID int,
 ShowDate date,
 ShowName varchar(30),
