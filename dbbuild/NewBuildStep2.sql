@@ -1,35 +1,13 @@
-ALTER TABLE tblshow ADD ShowNotes varchar(1024);
-ALTER TABLE tblshow ADD ShowFirstLine varchar(1024);
- 
-UPDATE tblshow, tblsetlist 
-set tblshow.ShowFirstLine = tblsetlist.SetText
-where tblsetlist.LineNR = 1
-and tblshow.ShowID = tblsetlist.ShowID ;
+/*
+This extracts 2 things from tblsetlist into tbl Show.
+it gets the first line for each show and move that to the show table 
+instead of the setlist table, then deletes them.
 
-delete from tblsetlist where linenr = 1;
+Then, using keywords it grabs the notes line from any show that has it
+and puts that in the shownotes field in tblshow.
 
-/* 
-THIS WHOLE STEP IS A CLUDGE.  IT IS PROBABLY BETTER TO MANUALLY 
-FIX THE SOURCE DATA.  THE WHOLE IDEA HERE IS TO TRY TO UPDATE THE 
-SHOWNOTES FIELD IN tblshow FOR THOSE SHOWS THAT HAVE SHOW NOTES.
-THERE HAS TO BE A BETTER WAY
-*/
+This is pretty kludgy, but I couldn't find a better solution quickly, so keeping it.
 
-
-
-/* 
-Blending the updates did not work.  Ended up updating a whole bunch with the same notes
-not the correct ones.  So I split them apart again.
-
-The first set of updates affected 1413 shows.  The delete affected 1414.  Investigating.
-Okay.  Figured it out.  Show ID 605 has the song.  "Love the one you're with"  That Show's 
-notes became the set list that had that song in it.  Not the actual notes of the show.
-Additionally, that set was also deleted.  That is the extra delete.
-
-I do not want to not use the with search, as that covers 280 show notes.
-So.  I have created a special circumstance for that one.  Notes below.
-
- */
 
 /*first get the first lines*/
 
@@ -43,11 +21,6 @@ where tblsetlist.LineNR = 1
 and tblshow.ShowID = tblsetlist.ShowID ;
 
 delete from tblsetlist where linenr = 1;
-
-
-
-
-
 
 UPDATE tblshow, tblsetlist set tblshow.ShowNotes = tblsetlist.SetText
  where settext like '%billing%'

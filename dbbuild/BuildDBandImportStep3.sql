@@ -22,6 +22,10 @@ So.  I have created a special circumstance for that one.  Notes below.
  */
 
 /*first get the first lines*/
+
+
+ALTER TABLE tblshow ADD ShowNotes varchar(1024);
+ALTER TABLE tblshow ADD ShowFirstLine varchar(1024);
  
 UPDATE tblshow, tblsetlist 
 set tblshow.ShowFirstLine = tblsetlist.SetText
@@ -31,9 +35,10 @@ and tblshow.ShowID = tblsetlist.ShowID ;
 delete from tblsetlist where linenr = 1;
 
 
-update tblsetlist set SetText = replace(SetText, 'Mart?n Fierro', 'Martin Fierro')
- where instr(SetText, 'Mart?n Fierro') > 0;
- 
+
+
+
+
 UPDATE tblshow, tblsetlist set tblshow.ShowNotes = tblsetlist.SetText
  where settext like '%billing%'
 and tblshow.ShowID = tblsetlist.ShowID ;
