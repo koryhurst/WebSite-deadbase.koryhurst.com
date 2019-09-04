@@ -84,36 +84,36 @@ ALTER TABLE tblsetlist ADD SetType char(11);
 /* This chunk sets the setlist type in tblsetlist */
 
 update tblsetlist set settype = "1:"            		where left(settext, 2) = "1:";
-update tblsetlist set settype = "1.5:"          		where	left(settext, 4) = "1.5:";
-update tblsetlist set settype = "2:"            		where	left(settext, 2) = "2:";
-update tblsetlist set settype = "3:"            		where	left(settext, 2) = "3:";
-update tblsetlist set settype = "E:"            		where	left(settext, 2) = "E:";
-update tblsetlist set settype = "E1:"           		where	left(settext, 3) = "E1:";
-update tblsetlist set settype = "E2:"           		where	left(settext, 3) = "E2:";
-update tblsetlist set settype = "Acoustic:"     		where	left(settext, 9) = "Acoustic:";
-update tblsetlist set settype = "Electric:"     		where	left(settext, 9) = "Electric:";
-update tblsetlist set settype =  "Electric-1:"  		where	left(settext, 11)=  "Electric-1:";
-update tblsetlist set settype =  "Electric-2:"  		where	left(settext, 11)=  "Electric-2:";
-update tblsetlist set settype =  "Acoustic-1:"  		where	left(settext, 11)=  "Acoustic-1:";
-update tblsetlist set settype =  "Acoustic-2:"  		where	left(settext, 11)=  "Acoustic-2:";
-update tblsetlist set settype = "Dylan:"        		where	left(settext, 6) = "Dylan:";
+update tblsetlist set settype = "1.5:"          		where 	left(settext, 4) = "1.5:";
+update tblsetlist set settype = "2:"            		where 	left(settext, 2) = "2:";
+update tblsetlist set settype = "3:"            		where 	left(settext, 2) = "3:";
+update tblsetlist set settype = "E:"            		where 	left(settext, 2) = "E:";
+update tblsetlist set settype = "E1:"           		where 	left(settext, 3) = "E1:";
+update tblsetlist set settype = "E2:"           		where 	left(settext, 3) = "E2:";
+update tblsetlist set settype = "Acoustic:"     		where 	left(settext, 9) = "Acoustic:";
+update tblsetlist set settype = "Electric:"     		where 	left(settext, 9) = "Electric:";
+update tblsetlist set settype =  "Electric-1:"  		where 	left(settext, 11)=  "Electric-1:";
+update tblsetlist set settype =  "Electric-2:"  		where 	left(settext, 11)=  "Electric-2:";
+update tblsetlist set settype =  "Acoustic-1:"  		where 	left(settext, 11)=  "Acoustic-1:";
+update tblsetlist set settype =  "Acoustic-2:"  		where 	left(settext, 11)=  "Acoustic-2:";
+update tblsetlist set settype = "Dylan:"        		where 	left(settext, 6) = "Dylan:";
 
 /* This chunk fixes the set text so it no longer includes the set type prefix*/
 
 update tblsetlist set settext = substr(settext from 4) where left(settext, 2) = "1:";
-update tblsetlist set settext = substr(settext from 6) where	left(settext, 4) = "1.5:";
-update tblsetlist set settext = substr(settext from 4) where	left(settext, 2) = "2:";
-update tblsetlist set settext = substr(settext from 4) where	left(settext, 2) = "3:";
-update tblsetlist set settext = substr(settext from 4) where	left(settext, 2) = "E:";
-update tblsetlist set settext = substr(settext from 5) where	left(settext, 3) = "E1:";
-update tblsetlist set settext = substr(settext from 5) where	left(settext, 3) = "E2:";
-update tblsetlist set settext = substr(settext from 11) where	left(settext, 9) = "Acoustic:";
-update tblsetlist set settext = substr(settext from 11) where	left(settext, 9) = "Electric:";
-update tblsetlist set settext = substr(settext from 13) where	left(settext, 11)=  "Electric-1:";
-update tblsetlist set settext = substr(settext from 13) where	left(settext, 11)=  "Electric-2:";
-update tblsetlist set settext = substr(settext from 13) where	left(settext, 11)=  "Acoustic-1:";
-update tblsetlist set settext = substr(settext from 13) where	left(settext, 11)=  "Acoustic-2:";
-update tblsetlist set settext = substr(settext from 8) where	left(settext, 6) = "Dylan:";
+update tblsetlist set settext = substr(settext from 6) where	 left(settext, 4) = "1.5:";
+update tblsetlist set settext = substr(settext from 4) where	 left(settext, 2) = "2:";
+update tblsetlist set settext = substr(settext from 4) where	 left(settext, 2) = "3:";
+update tblsetlist set settext = substr(settext from 4) where	 left(settext, 2) = "E:";
+update tblsetlist set settext = substr(settext from 5) where	 left(settext, 3) = "E1:";
+update tblsetlist set settext = substr(settext from 5) where	 left(settext, 3) = "E2:";
+update tblsetlist set settext = substr(settext from 11) where	 left(settext, 9) = "Acoustic:";
+update tblsetlist set settext = substr(settext from 11) where	 left(settext, 9) = "Electric:";
+update tblsetlist set settext = substr(settext from 13) where	 left(settext, 11)=  "Electric-1:";
+update tblsetlist set settext = substr(settext from 13) where	 left(settext, 11)=  "Electric-2:";
+update tblsetlist set settext = substr(settext from 13) where	 left(settext, 11)=  "Acoustic-1:";
+update tblsetlist set settext = substr(settext from 13) where	 left(settext, 11)=  "Acoustic-2:";
+update tblsetlist set settext = substr(settext from 8) where	 left(settext, 6) = "Dylan:";
 
 
 /* Just a check.  BTW.  There are still 50 left */
