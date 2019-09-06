@@ -1,6 +1,6 @@
 import csv
 
-NewSetList = open("NewSetList.csv", "w+")
+NewSetList = open("NewSetList.csv", "a+")
 OldSetList = open("setlist.csv", "r")
 
 SplitPoints = ["1.5:","2:","2.5:","E:","E1:","E2:"]
@@ -29,7 +29,11 @@ for OrigLine in OldFileLines:
         OldLinePart2 = ShowID + ',' + str((int(LineNr) + 1)) + ',"' + OrigLine[OrigLine.find(ThisSplitPoint):len(OrigLine)]
         print("OldLinePart2: " + OldLinePart2)
         LinesAddedToThisShow = LinesAddedToThisShow + 1
+        NewSetList.write(OldLinePart1)
+        NewSetList.write(OldLinePart2)
         wait = input("PRESS ENTER TO CONTINUE")
+    else:
+      NewSetList.write(ShowID + "," + str(int(LineNr) + LinesAddedToThisShow))
   
   
 #      1.5:
