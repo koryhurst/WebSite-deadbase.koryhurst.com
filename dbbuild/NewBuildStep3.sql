@@ -22,6 +22,8 @@ and tblshow.ShowID = tblsetlist.ShowID ;
 
 delete from tblsetlist where linenr = 1;
 
+
+
   
 UPDATE tblshow, tblsetlist 
 set tblshow.ShowNotes = tblsetlist.SetText
@@ -37,7 +39,10 @@ and settext not like 'E:%'
 and settext not like 'E1:%'
 and settext not like 'E2:%'
 and settext not like '1.5:%'
+and settext not like 'Dylan:%'
 and settext not like 'Acoustic:%'
+and settext not like 'Acoustic-1:%'
+and settext not like 'Acoustic-2:%'
 and settext not like 'Electric:%'
 and settext not like 'Electric-1:%'
 and settext not like 'Electric-2:%'
@@ -51,8 +56,10 @@ and settext not like 'E:%'
 and settext not like 'E1:%'
 and settext not like 'E2:%'
 and settext not like '1.5:%'
+and settext not like 'Dylan:%'
 and settext not like 'Acoustic:%'
+and settext not like 'Acoustic-1:%'
+and settext not like 'Acoustic-2:%'
 and settext not like 'Electric:%'
 and settext not like 'Electric-1:%'
-and settext not like 'Electric-2:%'
-;
+and settext not like 'Electric-2:%';
