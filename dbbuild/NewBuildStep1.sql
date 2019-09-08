@@ -13,11 +13,18 @@ drop table if exists tblsetlist;
 drop table if exists tblsetlist2;
 drop table if exists tbljam;
 drop table if exists tblsong;
+drop table if exists tblsettype;
 
 /* RUN ALL OF THESE FROM THE MYSQL COMMAND LINE */
 
 
-/* This file creates the tables */
+create table tblSetType
+(
+SetTypeID int,
+SetType char(12)
+);
+
+
 create table tblvenue
 (
 VenueID int,
@@ -88,11 +95,19 @@ SongText varchar(1024)
 );
 
 
-/* this file populates the tables from source data, alters the tables as necessary, ;
-then takes the non setlist lines from tblsetlist and moves them into tblshow;
-ON THE LOCAL XAMPP INSTALL THESE COMMANDS WILL NOT RUN IN THE COMMAND LINE;
-THEY MUST BE EXECUTED IN MYSQL WORKBENCH */;
- ;
+insert tblSetType values (0, '1:');
+insert tblSetType values (0, '2:');
+insert tblSetType values (0, '3:');
+insert tblSetType values (0, 'E:');
+insert tblSetType values (0, 'E1:');
+insert tblSetType values (0, 'E2:');
+insert tblSetType values (0, '1.5');
+insert tblSetType values (0, 'Acoustic:');
+insert tblSetType values (0, 'Electric:');
+insert tblSetType values (0, 'Electric-1:');
+insert tblSetType values (0, 'Electric-2:');
+
+
 insert tblstate values (0,'unknown','');
 insert tblstate values (1,'United States','US');
 insert tblstate values (2,'Alabama','AL');
