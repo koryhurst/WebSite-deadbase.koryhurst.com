@@ -84,9 +84,10 @@ SetlistID int
 create table tbljam
 (
 SetListID int,
-SongNr int,
+JamNr int,
 JamText varchar(1024)
 );
+
 create table tblsong
 (
 SetlistID int,

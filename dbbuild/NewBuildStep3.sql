@@ -1,15 +1,7 @@
 /*
-This extracts 2 things from tblsetlist into tbl Show.
-it gets the first line for each show and move that to the show table 
-instead of the setlist table, then deletes them.
-
-Then, using keywords it grabs the notes line from any show that has it
-and puts that in the shownotes field in tblshow.
-
-This is pretty kludgy, but I couldn't find a better solution quickly, so keeping it.
-
-
-/*first get the first lines*/
+Moves the first lines into tblshow
+then moves show notes into tblshow
+*/
 
 
 ALTER TABLE tblshow ADD ShowNotes varchar(1024);
