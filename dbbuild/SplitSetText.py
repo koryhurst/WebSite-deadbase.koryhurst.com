@@ -40,15 +40,15 @@ for OrigLine in OldFileLines:
 
 
         print(SetText[0:len(SplitPoint)])
-        OldLinePart1 = OrigLine[0:OrigLine.find(SplitPoint)-1] + '\n'
+        OldLinePart1 = OrigLine[0:OrigLine.find(SplitPoint)-1] + '"\n'
         print("OldLinePart1: " + OldLinePart1)
         OldLinePart2 = ShowID + ',' + str((int(LineNr) + 1)) + ',"' + OrigLine[OrigLine.find(SplitPoint):len(OrigLine)]
         print("OldLinePart2: " + OldLinePart2)
         LinesAddedToThisShow = LinesAddedToThisShow + 1
-        NewSetList.write(OldLinePart1)
-        NewSetList.write(OldLinePart2)
+        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart1 + '")')
+        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart2 + '")')
         #wait = input("PRESS ENTER TO CONTINUE")
         SplitLinesOutput = True
   if SplitLinesOutput == False:
-    NewSetList.write(ShowID + "," + str(int(LineNr) + LinesAddedToThisShow) + "," + SetText)
+    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + ShowID + "," + str(int(LineNr) + LinesAddedToThisShow) + "," + SetText + '")')
     
