@@ -1,3 +1,4 @@
+import csv
 import mysql.connector
 import sys
 sys.path.append('../Python-FunctionLibrary')
@@ -10,7 +11,7 @@ mydb = mysql.connector.connect(
   user=DatabaseDetails[1],
   passwd=DatabaseDetails[2],
   database=DatabaseDetails[3]
-  )import csv
+  )
 
 NewSetList = open("NewSetList.csv", "w+")
 NewSetList = open("NewSetList.csv", "a")
