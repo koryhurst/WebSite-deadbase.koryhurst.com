@@ -83,6 +83,7 @@ SetlistID int
  
 create table tbljam
 (
+JamID int,
 SetListID int,
 JamNr int,
 JamText varchar(1024)

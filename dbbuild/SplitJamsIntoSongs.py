@@ -13,31 +13,25 @@ mydb = mysql.connector.connect(
   )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM tblsetlist order by setlistid")
+mycursor.execute("SELECT * FROM tbljam order by jamid")
 myresult = mycursor.fetchall()
 
 #NewSetList = open("NewSetList.csv", "w+")
 #NewSetList = open("NewSetList.csv", "a")
-sqlInsert = "INSERT INTO tbljam (JamID, SetListID, JamNr, JamText) VALUES (%s, %s, %s, %s)"
+sqlInsert = "INSERT INTO tblsong (JamID, SongNr, Song) VALUES (%s, %s, %s)"
 
-JamID = 1
 for OrigLine in myresult:
-  SetListID = OrigLine[0]
-  ShowID = OrigLine[1]
-  LineNr = OrigLine[2]
-  SetText = OrigLine[3]
-  print(OrigLine)
-  print(SetListID)
-  print(ShowID)
-  print(SetText)
-  print(SetText.split(","))
-  Jams = SetText.split(",")
-  JamNr = 1
-  for Jam in Jams:
-    InsertValues = [JamID, str(SetListID), str(JamNr), Jam]
+  JamID = OrigLine[0]
+  JamText = OrigLine[1]
+  print(JamID)
+  print(JamText)
+  print(JamText.split(">"))
+  Songs = SetText.split(">")
+  SongNr = 1
+  for Song in Songs:
+    InsertValues = [str(JamID), str(SongNr), Song]
     myCursorInsert = mydb.cursor()
     myCursorInsert.execute(sqlInsert, InsertValues)
     mydb.commit()
     myCursorInsert.close()
-    JamNr = JamNr + 1
-    JamID = JamID + 1
+    SongNr = SongNr + 1
