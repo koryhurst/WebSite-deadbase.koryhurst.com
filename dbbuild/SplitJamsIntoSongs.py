@@ -18,20 +18,26 @@ myresult = mycursor.fetchall()
 
 #NewSetList = open("NewSetList.csv", "w+")
 #NewSetList = open("NewSetList.csv", "a")
-sqlInsert = "INSERT INTO tblsong (JamID, SongNr, Song) VALUES (%s, %s, %s)"
-
+sqlInsert = "INSERT INTO tblsong (SongID, JamID, SongNr, SongText, JammedInto) VALUES (%s, %s, %s, %s, %s)"
+SongID = 1
 for OrigLine in myresult:
   JamID = OrigLine[0]
-  JamText = OrigLine[1]
+  JamText = OrigLine[3]
+  print(OrigLine)
   print(JamID)
   print(JamText)
   print(JamText.split(">"))
-  Songs = SetText.split(">")
+  Songs = JamText.split(">")
   SongNr = 1
   for Song in Songs:
-    InsertValues = [str(JamID), str(SongNr), Song]
+    if len(Songs) > 1:
+      InsertValues = [SongID, JamID, SongNr, Song, ""]
+    else:
+      InsertValues = [SongID, JamID, SongNr, Song, ">"]
     myCursorInsert = mydb.cursor()
     myCursorInsert.execute(sqlInsert, InsertValues)
     mydb.commit()
     myCursorInsert.close()
     SongNr = SongNr + 1
+  JamID = JamID + 1
+  SongID = SongID + 1

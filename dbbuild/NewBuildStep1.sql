@@ -91,9 +91,11 @@ JamText varchar(1024)
 
 create table tblsong
 (
-SetlistID int,
+SongID int,
+JamID int,
 SongNr decimal(6,2),
-SongText varchar(1024)
+SongText varchar(1024),
+JammedInto char(1)
 );
 
 
