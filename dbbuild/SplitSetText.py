@@ -1,6 +1,7 @@
+import csv
 import mysql.connector
 import sys
-sys.path.append('../Python-FunctionLibrary')
+sys.path.append('../../Python-FunctionLibrary')
 import BeautifulSoupFunctions
 
 DatabaseDetails = ["localhost","root","","dbkhurst"]
@@ -10,11 +11,16 @@ mydb = mysql.connector.connect(
   user=DatabaseDetails[1],
   passwd=DatabaseDetails[2],
   database=DatabaseDetails[3]
-  )import csv
+  )
 
-NewSetList = open("NewSetList.csv", "w+")
-NewSetList = open("NewSetList.csv", "a")
-OldSetList = open("setlist.csv", "r")
+#NewSetList = open("NewSetList.csv", "w+")
+#NewSetList = open("NewSetList.csv", "a")
+#OldSetList = open("setlist.csv", "r")
+
+NewSetList = open("NewSetList2.csv", "w+")
+NewSetList = open("NewSetList2.csv", "a")
+OldSetList = open("NewSetList.csv", "r")
+
 
 SplitPoints = ["Electric-2:", "1.5:","2:","2.5:","E:","E1:","E2:"]
 ShowID = 0
@@ -62,5 +68,5 @@ for OrigLine in OldFileLines:
         #wait = input("PRESS ENTER TO CONTINUE")
         SplitLinesOutput = True
   if SplitLinesOutput == False:
-    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + ShowID + "," + str(int(LineNr) + LinesAddedToThisShow) + "," + SetText + '")')
+    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + str(ShowID) + "," + str(int(LineNr) + LinesAddedToThisShow) + "," + SetText + '")')
     
