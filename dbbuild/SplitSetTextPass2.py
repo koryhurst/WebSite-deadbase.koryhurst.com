@@ -17,8 +17,8 @@ mydb = mysql.connector.connect(
 #NewSetList = open("NewSetList.csv", "a")
 #OldSetList = open("setlist.csv", "r")
 
-NewSetList = open("NewSetList2.csv", "w+")
-NewSetList = open("NewSetList2.csv", "a")
+NewSetList = open("NewSetList2ndPass.csv", "w+")
+NewSetList = open("NewSetList2ndPass.csv", "a")
 OldSetList = open("NewSetList.csv", "r")
 
 
@@ -54,19 +54,19 @@ for OrigLine in OldFileLines:
 
 
       if SetText[0:len(SplitPoint)] != SplitPoint:
-
-
-
+        
         print(SetText[0:len(SplitPoint)])
-        OldLinePart1 = OrigLine[0:OrigLine.find(SplitPoint)-1] + '"\n'
+        OldLinePart1 = OrigLine[0:OrigLine.find(SplitPoint)-2] + '"'
         print("OldLinePart1: " + OldLinePart1)
-        OldLinePart2 = ShowID + ',' + str((int(LineNr) + 1)) + ',"' + OrigLine[OrigLine.find(SplitPoint):len(OrigLine)]
+        OldLinePart2 = ShowID + ',' + str((int(LineNr) + 1)) + ',"' + OrigLine[OrigLine.find(SplitPoint)-1:len(OrigLine)]
         print("OldLinePart2: " + OldLinePart2)
         LinesAddedToThisShow = LinesAddedToThisShow + 1
-        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart1 + '")')
-        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart2 + '")')
+        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart1 + ');\n')
+        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart2.rstrip() + ');\n')
+        
         #wait = input("PRESS ENTER TO CONTINUE")
+        
         SplitLinesOutput = True
   if SplitLinesOutput == False:
-    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + str(ShowID) + "," + int(LineNr) + int(LinesAddedToThisShow) + "," + SetText + '")')
+    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + str(ShowID) + "," + str(int(LineNr) + int(LinesAddedToThisShow)) + "," + SetText.rstrip() + ');\n')
     

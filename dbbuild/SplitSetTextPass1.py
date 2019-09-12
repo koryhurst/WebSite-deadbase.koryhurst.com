@@ -13,13 +13,9 @@ mydb = mysql.connector.connect(
   database=DatabaseDetails[3]
   )
 
-#NewSetList = open("NewSetList.csv", "w+")
-#NewSetList = open("NewSetList.csv", "a")
-#OldSetList = open("setlist.csv", "r")
-
-NewSetList = open("NewSetList2.csv", "w+")
-NewSetList = open("NewSetList2.csv", "a")
-OldSetList = open("NewSetList.csv", "r")
+NewSetList = open("NewSetList.csv", "w+")
+NewSetList = open("NewSetList.csv", "a")
+OldSetList = open("setlist.csv", "r")
 
 
 SplitPoints = ["Electric-2:", "1.5:","2:","2.5:","E:","E1:","E2:"]
@@ -63,10 +59,10 @@ for OrigLine in OldFileLines:
         OldLinePart2 = ShowID + ',' + str((int(LineNr) + 1)) + ',"' + OrigLine[OrigLine.find(SplitPoint):len(OrigLine)]
         print("OldLinePart2: " + OldLinePart2)
         LinesAddedToThisShow = LinesAddedToThisShow + 1
-        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart1 + '")')
-        NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + OldLinePart2 + '")')
+        NewSetList.write(OldLinePart1)
+        NewSetList.write(OldLinePart2)
         #wait = input("PRESS ENTER TO CONTINUE")
         SplitLinesOutput = True
   if SplitLinesOutput == False:
-    NewSetList.write("insert tblsetlist (showid, linenr, settext) values (" + str(ShowID) + "," + int(LineNr) + int(LinesAddedToThisShow) + "," + SetText + '")')
+    NewSetList.write(str(ShowID) + "," + str(int(LineNr) + int(LinesAddedToThisShow)) + "," + SetText)
     
