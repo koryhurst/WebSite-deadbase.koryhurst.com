@@ -1,0 +1,6 @@
+
+Run Steps 1 to 3
+  (Step 2 was built using Setlist.txt, SplitSetlistPass1.py and SplitSetlistPass2.py)
+Run SplitSetIntoJams.py
+Run SplitJamsIntoSongs.py
+Run NewBuildStep4.sql

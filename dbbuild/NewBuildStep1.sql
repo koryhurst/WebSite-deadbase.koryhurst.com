@@ -71,16 +71,7 @@ SetText varchar(1024),
 PRIMARY KEY (SetListID)
 );
 
-/*This table may be not required */
 
-create table tblsetlist2
-(
-ShowID int,
-LineNr int,
-SetText varchar(1024),
-SetlistID int
-);
- 
 create table tbljam
 (
 JamID int,
