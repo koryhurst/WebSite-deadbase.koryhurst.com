@@ -83,9 +83,9 @@ create table tblsong
 (
 SongID int,
 JamID int,
-SongNr decimal(6,2),
+SongNr int,
 SongText varchar(1024),
-JammedInto char(1)
+JammedOutOf char(1)
 );
 
 
