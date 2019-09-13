@@ -15,6 +15,8 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 mycursor.execute("SELECT * FROM tbljam order by jamid")
 myresult = mycursor.fetchall()
+myCursorInsert = mydb.cursor()
+
 
 #NewSetList = open("NewSetList.csv", "w+")
 #NewSetList = open("NewSetList.csv", "a")
@@ -24,24 +26,24 @@ SongID = 1
 for OrigLine in myresult:
   JamID = OrigLine[0]
   JamText = OrigLine[3]
-  print(OrigLine)
-  print(JamID)
-  print(JamText)
-  print(JamText.split(">"))
+  #print(OrigLine)
+  #print(JamID)
+  #print(JamText)
+  #print(JamText.split(">"))
   Songs = JamText.split(">")
   SongNr = 1
-  print(len(Songs))
+  #print(len(Songs))
   SongsLen = len(Songs) - 1
   for Index, SongText in enumerate(Songs):
     if SongsLen == 0 or Index == SongsLen:
       JammedOutOf = "" 
     else:
       JammedOutOf = ">"
-    wait = input("PRESS ENTER TO CONTINUE")    
+    #wait = input("PRESS ENTER TO CONTINUE")    
     InsertValues = [SongID, JamID, Index + 1, SongText, JammedOutOf]
     SongID = SongID + 1    
-    myCursorInsert = mydb.cursor()
     myCursorInsert.execute(sqlInsert, InsertValues)
-    mydb.commit()
-    myCursorInsert = mydb.cursor()
+
+mydb.commit()
+myCursorInsert = mydb.cursor()
 
