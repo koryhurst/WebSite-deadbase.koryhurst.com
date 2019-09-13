@@ -31,24 +31,17 @@ for OrigLine in myresult:
   Songs = JamText.split(">")
   SongNr = 1
   print(len(Songs))
-  if len(Songs) == 1:
-    wait = input("PRESS ENTER TO CONTINUE")
-    SongText = Songs[0]
-    InsertValues = [SongID, JamID, SongNr, SongText, ""]
+  SongsLen = len(Songs) - 1
+  for Index, SongText in enumerate(Songs):
+    if SongsLen == 0 or Index == SongsLen:
+      JammedOutOf = "" 
+    else:
+      JammedOutOf = ">"
+    wait = input("PRESS ENTER TO CONTINUE")    
+    InsertValues = [SongID, JamID, Index + 1, SongText, JammedOutOf]
     SongID = SongID + 1    
     myCursorInsert = mydb.cursor()
     myCursorInsert.execute(sqlInsert, InsertValues)
     mydb.commit()
     myCursorInsert = mydb.cursor()
-  else:
-    for SongText in Songs:
-      print(SongText)
-      wait = input("PRESS ENTER TO CONTINUE")
-      #THIS NEEDS A FIX.  THE LAST SONG IN EACH JAM SHOULD NOT HAVE A ">"  
-      InsertValues = [SongID, JamID, SongNr, SongText, ">"]
-      SongID = SongID + 1
-      SongNr = SongNr + 1
-      myCursorInsert = mydb.cursor()
-      myCursorInsert.execute(sqlInsert, InsertValues)
-      mydb.commit()
-      myCursorInsert.close()
+
