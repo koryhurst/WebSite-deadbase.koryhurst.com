@@ -19,6 +19,7 @@ myresult = mycursor.fetchall()
 #NewSetList = open("NewSetList.csv", "w+")
 #NewSetList = open("NewSetList.csv", "a")
 sqlInsert = "INSERT INTO tblsong (SongID, JamID, SongNr, SongText, JammedOutOf) VALUES (%s, %s, %s, %s, %s)"
+
 SongID = 1
 for OrigLine in myresult:
   JamID = OrigLine[0]
@@ -29,16 +30,25 @@ for OrigLine in myresult:
   print(JamText.split(">"))
   Songs = JamText.split(">")
   SongNr = 1
-  if len(Songs) = 1:
-    InsertValues = [SongID, JamID, SongNr, Song, ""]
+  print(len(Songs))
+  if len(Songs) == 1:
+    wait = input("PRESS ENTER TO CONTINUE")
+    SongText = Songs[0]
+    InsertValues = [SongID, JamID, SongNr, SongText, ""]
     SongID = SongID + 1    
+    myCursorInsert = mydb.cursor()
+    myCursorInsert.execute(sqlInsert, InsertValues)
+    mydb.commit()
+    myCursorInsert = mydb.cursor()
   else:
-    for Song in Songs:
+    for SongText in Songs:
+      print(SongText)
+      wait = input("PRESS ENTER TO CONTINUE")
       #THIS NEEDS A FIX.  THE LAST SONG IN EACH JAM SHOULD NOT HAVE A ">"  
-      InsertValues = [SongID, JamID, SongNr, Song, ">"]
+      InsertValues = [SongID, JamID, SongNr, SongText, ">"]
       SongID = SongID + 1
-  myCursorInsert = mydb.cursor()
-  myCursorInsert.execute(sqlInsert, InsertValues)
-  mydb.commit()
-  myCursorInsert.close()
-  SongNr = SongNr + 1
+      SongNr = SongNr + 1
+      myCursorInsert = mydb.cursor()
+      myCursorInsert.execute(sqlInsert, InsertValues)
+      mydb.commit()
+      myCursorInsert.close()
