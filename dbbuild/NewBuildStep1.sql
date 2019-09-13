@@ -10,7 +10,6 @@ drop table if exists tblstate;
 drop table if exists tblcountry;
 drop table if exists tblshow;
 drop table if exists tblsetlist;
-drop table if exists tblsetlist2;
 drop table if exists tbljam;
 drop table if exists tblsong;
 drop table if exists tblsettype;
