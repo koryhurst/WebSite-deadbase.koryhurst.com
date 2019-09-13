@@ -10,3 +10,5 @@ SongNr int,
 SongText varchar(1024),
 JammedOutOf char(1)
 );
+
+select * from tblsong limit 50;
