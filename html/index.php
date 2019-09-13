@@ -28,6 +28,8 @@ echo '<div id="content" class="narrowcolumn">' . $GLOBALS['NewLine']  ;
 echo '<div class="post">' . $GLOBALS['NewLine'] ; //because we are matching up to Word Press we use post, but it is just a section
 echo '<div id="entry">' . $GLOBALS['NewLine'] ;
 
+echo 'PLEASE NOTE A MAJOR REBUILD IS CURRENTLY GOING ON 2019-09-12.  THE CONTENT WILL RETURN SHORTLY.<BR><BR>';
+echo '';
 echo 'Welcome to my Grateful Dead setlist database.  I set this up for two reasons.  First deadbase that used to be housed at Dharma Rose has been closed.';
 echo '  Second being the data hungry guy I am, I wanted to run my own queries against the setlists.  The dataset comes from a number of sources including the original deadbase.';
 echo '<br>';
