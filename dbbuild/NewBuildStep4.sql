@@ -1,5 +1,7 @@
-ALTER TABLE tblsong ADD SongTags varchar(3);
+ALTER TABLE tblsong ADD FootNote varchar(3);
 
+update tblsong
+set songtext = rtrim(songtext);
 
 update tblsong
 set songtags = '**'
