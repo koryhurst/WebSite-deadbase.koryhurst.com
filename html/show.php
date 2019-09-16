@@ -71,9 +71,10 @@ if (count($aSetList) > 0)
 //			print_r($aTest);
 		//Print2DArray($aTest);
 //			echo '</h4>';
-			$sSQLSongs = 'select ts.SongID, SongNr, SongText, JammedOutOf, FootNote ';
-			$sSQLSongs = $sSQLSongs . 'from tblsetlistsongdetail tsd inner join tblsong ts on ts.SongID = tsd.SongID ';
-			$sSQLSongs = $sSQLSongs . 'where SetListID = ' . $aSetListLine['SetListID'] . ' order by SongNr ';
+
+			$sSQLSongs = 'select ts.SongID, SongNr, SongText, JammedOutOf, FootNote, tj.JamID ';
+			$sSQLSongs = $sSQLSongs . 'from tblsong ts inner join tbljam tj on ts.JamID = tj.JamID  ';
+			$sSQLSongs = $sSQLSongs . 'where SetListID = ' . $aSetListLine['SetListID'] . ' order by JamID, SongNr ';
 			//echo $sSQLSongs ;
 			//$aSongArray = GetRS($sSQLSongs);
 			$aSongs = GetRS($sSQLSongs);

@@ -31,7 +31,6 @@ for OrigLine in myresult:
   #print(JamText)
   #print(JamText.split(">"))
   Songs = JamText.split(">")
-  SongNr = 1
   #print(len(Songs))
   SongsLen = len(Songs) - 1
   for Index, SongText in enumerate(Songs):
@@ -41,7 +40,7 @@ for OrigLine in myresult:
       JammedOutOf = ">"
     #wait = input("PRESS ENTER TO CONTINUE")    
     InsertValues = [SongID, JamID, Index + 1, SongText, JammedOutOf]
-    SongID = SongID + 1    
+    SongID = SongID + 1
     myCursorInsert.execute(sqlInsert, InsertValues)
 
 mydb.commit()
