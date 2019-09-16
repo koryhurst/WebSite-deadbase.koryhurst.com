@@ -27,11 +27,16 @@ echo '<div class="post">' . $NewLine; //because we are matching up to Word Press
 echo '<div id="entry">' . $NewLine;
 
 
+//OLD Query
+//$sSQLSongs = 'select ts.SongID, SongText, MainVocals, count(*) as TimesPlayed ' ;
+//$sSQLSongs = $sSQLSongs . 'from tblsong as ts inner join tblsetlistsongdetail td ';
+//$sSQLSongs = $sSQLSongs . 'on ts.SongID = td.SongID ';
+//$sSQLSongs = $sSQLSongs . 'group by SongID, SongText, MainVocals ';
+//$sSQLSongs = $sSQLSongs . 'order by ' . $sSortBy . ' ' . $sSortOrder ;
 
-$sSQLSongs = 'select ts.SongID, SongText, MainVocals, count(*) as TimesPlayed ' ;
-$sSQLSongs = $sSQLSongs . 'from tblsong as ts inner join tblsetlistsongdetail td ';
-$sSQLSongs = $sSQLSongs . 'on ts.SongID = td.SongID ';
-$sSQLSongs = $sSQLSongs . 'group by SongID, SongText, MainVocals ';
+$sSQLSongs = 'select SongText, count(*) as TimesPlayed ' ;
+$sSQLSongs = $sSQLSongs . 'from tblsong ';
+$sSQLSongs = $sSQLSongs . 'group by SongText ';
 $sSQLSongs = $sSQLSongs . 'order by ' . $sSortBy . ' ' . $sSortOrder ;
 
 //echo $sSQLSongs ;
