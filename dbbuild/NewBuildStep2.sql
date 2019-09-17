@@ -511,8 +511,7 @@ insert tblsetlist (showid, linenr, settext) values (105,3,"2: Scarlet> Fire, Way
 insert tblsetlist (showid, linenr, settext) values (105,4,"E: Liberty");
 insert tblsetlist (showid, linenr, settext) values (106,1,"07-17-66 Fillmore Auditorium, San Francisco, Ca. (Sun)");
 insert tblsetlist (showid, linenr, settext) values (106,2,"1: Big Boss Man, Standing On The Corner> BIODTL> In The Pines, Cardboard Cowboy> Nobody's Fault, Next Time");
-insert tblsetlist (showid, linenr, settext) values (106,3,"list may be incomplete - afternoon concert ");
-insert tblsetlist (showid, linenr, settext) values (106,4,"2:00 PM) - billing: Jefferson Airplane; GD");
+insert tblsetlist (showid, linenr, settext) values (106,3,"list may be incomplete - afternoon concert 2:00 PM) - billing: Jefferson Airplane; GD");
 insert tblsetlist (showid, linenr, settext) values (107,1,"10-09-68 The Matrix, San Francisco, Ca. (Wed)");
 insert tblsetlist (showid, linenr, settext) values (107,2,"1: Lovelight> Drums> Other One> Caution> Other One> Death Don't, Dark Star> The Eleven> The Seven");
 insert tblsetlist (showid, linenr, settext) values (107,3,"2: Jam, It's A Sin, Jam*, Jam*, Yonder's Wall*, Jam");
@@ -9132,7 +9131,7 @@ insert tblsetlist (showid, linenr, settext) values (2239,2,"Cryptical> Other One
 insert tblsetlist (showid, linenr, settext) values (2239,3,"also: The Velvet Underground; The Fugs");
 insert tblsetlist (showid, linenr, settext) values (2240,1,"02-09-69a The Lyric Theater, Baltimore, Md. (Sun)");
 insert tblsetlist (showid, linenr, settext) values (2240,2,"1: No Setlist Data (Aaarg)");
-insert tblsetlist (showid, linenr, settext) values (2240,3,"3:30 show - First Baltimore Rock Festival - billing: Chambers Brothers; GD - $4, $5, $6");
+insert tblsetlist (showid, linenr, settext) values (2240,3,"Afternoon 3:30 show - First Baltimore Rock Festival - billing: Chambers Brothers; GD - $4/$5/$6");
 insert tblsetlist (showid, linenr, settext) values (2241,1,"02-09-69b The Lyric Theater, Baltimore, Md. (Sun)");
 insert tblsetlist (showid, linenr, settext) values (2241,2,"1: No Setlist Data (Aaarg)");
 insert tblsetlist (showid, linenr, settext) values (2241,3,"7:30 show - First Baltimore Rock Festival - billing: Chambers Brothers; GD - $4, $5, $6");
@@ -9180,7 +9179,7 @@ insert tblsetlist (showid, linenr, settext) values (2254,4,"E: GDTRFB");
 insert tblsetlist (showid, linenr, settext) values (2254,5,"last 'GDTRFB': 01-12-79 [74]");
 insert tblsetlist (showid, linenr, settext) values (2255,1,"04-30-67a The Cheetah, Santa Monica, Ca. (Sun)");
 insert tblsetlist (showid, linenr, settext) values (2255,2,"1: No Setlist Data (Aaarg)");
-insert tblsetlist (showid, linenr, settext) values (2255,3,"3:00 PM show");
+insert tblsetlist (showid, linenr, settext) values (2255,3,"Afternoon 3:00 PM show");
 insert tblsetlist (showid, linenr, settext) values (2256,1,"04-30-67b The Cheetah, Santa Monica, Ca. (Sun)");
 insert tblsetlist (showid, linenr, settext) values (2256,2,"8:00 PM show");
 insert tblsetlist (showid, linenr, settext) values (2257,1,"05-03-69a Sierra College, Rocklin, Ca. (Sat)");
